@@ -7,7 +7,7 @@ function streamMode() {
 function showMovie (title) {
             
     document.querySelector('.viewer').innerHTML = `
-            <video width='320' height='240' controls>
+            <video width='460' height='320' controls>
                 <source src='./videos/${title}' type='video/mp4'>
             </video>`
 }

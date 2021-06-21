@@ -1,0 +1,25 @@
+body {
+  background-color: tan;
+}
+
+.hidden {
+  display: none;
+}
+ul {
+  font-size: x-large;
+}
+
+#grid1 {
+  display: grid;
+  grid-template-columns: 200px 1fr;
+}
+
+.control {
+  display: inline;
+}
+
+button {
+  width: 60px;
+  height: 30px;
+  margin: 10px;
+}
