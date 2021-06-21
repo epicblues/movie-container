@@ -10,51 +10,25 @@
         Movie Upload And Streaming
     </header>
 
-    <body>
-    <ul id="movList">
-        
-    </ul>
 
+
+    <body>
+    <ul id="movList"></ul>
+    <div id="control">
+        <button onclick="
+        document.querySelector('.viewer').innerHTML = `
+        <form action='post'>
+            <input type='file' name='up_movie'>
+            <input type='submit'>
+        </form>`
+        console.log(new FormData())
+        ">create</button>
+    </div>
     <article class="viewer">
 
     </article>
     
-    <script>
-        
-        function showMovie (title) {
-            console.log(title)
-            document.querySelector('.viewer').innerHTML = `
-                    <video width='320' height='240' controls>
-                        <source src='./videos/${title}' type='video/mp4'>
-                        blank
-                    </video>`
-        }
-
-        fetch('./list.json')
-        .then((res,err) => {
-            return res.json();
-        })
-        .then((json) => {
-            console.log(json);
-            let list = '';
-            for(let movie of json) {
-                console.log(movie.title, typeof movie.title)
-                list += `<li id=${movie.id}><a onclick="
-                    event.preventDefault();
-                    showMovie('${movie.title}');
-                    "
-                    href="./videos/${movie.title}">movie${movie.id}</a></li>`
-            }
-            document.getElementById('movList').innerHTML = list
-            
-        })
-        .catch((err) => {
-            console.log(err)
-        })
-
-        
-        
-    </script>
+    <script src="movieList.js"></script>
 
     </body>
 </html>
