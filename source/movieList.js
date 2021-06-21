@@ -3,7 +3,7 @@ function showMovie (title) {
     document.querySelector('.viewer').innerHTML = `
             <video width='320' height='240' controls>
                 <source src='./videos/${title}' type='video/mp4'>
-                blank
+                
             </video>`
 }
 
@@ -12,7 +12,7 @@ fetch('./list.json')
     return res.json();
 })
 .then((json) => {
-    console.log(json);
+    
     let list = '';
     for(let movie of json) {
         
