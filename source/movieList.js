@@ -1,7 +1,7 @@
 function streamMode() {
     document.querySelector('.viewer').className='viewer';
     document.querySelector('form').className='hidden';
-    document.querySelector('#create').className='';
+    
 }
 
 function showMovie (title) {
